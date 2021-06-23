@@ -1,0 +1,501 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    color: white;
+    overflow-x: hidden;
+    padding-right: 15px;
+}
+
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    /* background-color: white; */
+    background-color: #231f20;
+    /* background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%); */
+}
+
+h1, h2{
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+}
+
+h1{
+    font-size: 5rem;
+    color: white;
+    margin-top: 30px;
+}
+h2{
+    font-size: 4.2rem;
+}
+
+.welcome-section > p {
+    font-size: 2rem;
+    font-weight: 200;
+    margin-top: 20px;
+    color: white;
+    /* text-align: center; */
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: white;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    left: 0;
+    display: flex;
+    justify-content: space-around; /*flex-end*/
+    z-index: 10;
+}
+
+.logo-image{
+  width: 250px;
+  height: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: -6px;
+  float: left;
+}
+
+
+  /* Style the topnav links */
+  .topnav a {
+    float: right;
+    display: block;
+    color: black; /*#f2f2f2*/
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  .nav-list{
+      display: flex;
+      margin-right: 2rem;
+      list-style-type: none; /* removes bullets*/
+      justify-content: center;
+      align-items: center;
+  }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    background-color: #d2232a;
+    color: white;
+  }
+
+  .campus-section {
+    text-align: center;
+    padding: 10rem 2rem;
+    background:#d2232a;
+  }
+  
+  .campus-section-header {
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    border-bottom: 0.2rem solid var(--main-white);
+  }
+  
+  /* "Automagic" image grid using no media queries */
+  .campus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+  }
+  
+  .project {
+    background: rgb(46, 45, 45);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+  }
+  
+a:link{
+    text-decoration: none;
+}
+
+  .code {
+    color: rgb(46, 45, 45);
+    transition: color 0.3s ease-out;
+  }
+  
+  .project:hover .code {
+    color: #ff7f50;
+  }
+  
+  .project-image {
+    height: calc(100% - 4em);
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .project-title {
+    font-size: 2rem;
+    padding: 0.8rem 0.5rem;
+    margin-top: 0;
+    color: white;
+  }
+
+
+  /*START OF 3 COLUMN LAYOUT*/
+
+  .columns{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.column{
+    flex: 1;
+    border: 3px solid black;
+    margin: 2px;
+    padding: 10px;
+    background: #d2232a;
+    transition: width 2s, height 2s; /*0.3%*/
+}
+  /*END OF 3 COLUMN LAYOUT*/
+
+  /* Contact section */
+  
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+  }
+  
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    padding: 0 2rem;
+    background: rgb(37, 35, 35);
+  }
+  
+  .contact-section-header > h2 {
+    font-size: 6rem;
+  }
+  
+  .contact-section-header > p {
+    font-style: italic;
+  }
+  
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+  }
+
+  .contact-links > a{
+      color: white;
+  }
+  
+  .contact-details {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .contact-details:hover {
+    transform: translateY(8px);
+  }
+  /* End of Contact Section*/
+
+  /*START OF 2 COLUMN LAYOUT*/
+  /* Left column */
+.leftcolumn {   
+  float: left;
+  width: 73%;
+  color: black;
+  border: 3px solid black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px; 
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  height: auto;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 10px;
+  color: black;
+  border: 3px solid black;
+}
+
+/* Fake image */
+.fake-img {
+  background-color: #ebebeb;
+  width: calc(100%/3);
+  padding: 20px;
+  float: left;
+}
+
+.fakeimg {
+  background-color: #ebebeb;
+  width: 100%;
+  padding: 10px 10px 5px 10px;
+  border: 3px solid black;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+/*START OF FLIP CARDS*/
+.container{
+  width: 100%;
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  background-color: #ebebeb;
+}
+
+.card-container{
+  width: 200px;
+  height: 300px;
+  margin: 30px;
+}
+
+.cards{
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.cards:hover{
+  transform: rotateY(180deg);
+}
+
+.cards figure{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.cards .front{
+  background: #d2232a;/*rgb(6, 202, 121)*/
+  color: white;
+  text-align: center;
+  backface-visibility: hidden;
+}
+
+.cards .back{
+  background: #231f20;/*rgb(80, 228, 35)*/
+  color: white;
+  transform: rotateY(180deg);
+  text-align: center;
+  backface-visibility: hidden;
+}
+
+.back button{
+  margin-top: 10px;
+  cursor: pointer;
+  color: #231f20;
+  border: none;
+  width: 70px;
+  height: 40px;
+  font-size: 20px
+}
+
+.cards > figure{
+  padding: 0 10px;
+}
+
+/* hr.rounded {
+  border-top: 8px solid rgb(6, 202, 121);
+  border-radius: 5px;
+} */
+
+/*END OF FLIP CARDS*/
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+  /*END OF 2 COLUMN LAYOUT*/
+
+  /*START OF ABOUT US*/
+  .about-list > li{
+    list-style-type: none;
+  }
+  .about-list > li > a{
+    color: black;
+    font-size: 1.1rem;
+  }
+  .about-list a:hover{
+    color: #d2232a;
+  }
+  /*END OF ABOUT US*/
+
+  /*START OF FOOTER */
+  
+  footer {
+    font-weight: 300;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    background: rgb(37, 35, 35);
+    border-top: 4px solid #d2232a;
+  }
+  
+  footer > p {
+    margin: 2rem;
+    color: white;
+  }
+ a{
+    color: white;
+}
+  
+  footer i {
+    vertical-align: middle;
+  }
+/* END OF FOOTER*/
+
+  /* Media Queries*/
+
+  @media (max-width: 30.625em) {
+    .projects-section {
+      padding: 6rem 1rem;
+    }
+
+    .leftcolumn{
+      width: 100%;
+      /* justify-content: center;
+      text-align: center; */
+    }
+
+   .rightcolumn{
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 28.75em) {
+    .projects-section-header {
+      font-size: 4rem;
+    }
+
+    .leftcolumn{
+      width: 100%;
+      
+    }
+
+   .rightcolumn{
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 28.75em) {
+    .topnav {
+      justify-content: center;
+    }
+
+    .leftcolumn{
+      width: 100%;
+    }
+
+   .rightcolumn{
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+    html {
+      font-size: 55%;
+    }
+
+    .leftcolumn{
+      width: 100%;
+    }
+
+   .rightcolumn{
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .card h2{
+      font-size: 27px;
+    }
+  }
+
+  @media (max-width: 28.75em) {
+    .contact-section-header > h2 {
+      font-size: 4rem;
+    }
+
+    .fake-img{
+      display: flex;
+    }
+  }
+
+  @media (max-width: 28.75em) {
+    footer {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .leftcolumn{
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+
+   .rightcolumn{
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  /* End of Media Queries */
